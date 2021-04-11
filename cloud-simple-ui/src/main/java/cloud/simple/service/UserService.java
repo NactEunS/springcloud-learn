@@ -1,16 +1,16 @@
 package cloud.simple.service;
 
+import cloud.simple.model.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-import cloud.simple.model.User;
 //import cloud.simple.service.UserServiceProvider.FeignUserService;
-
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class UserService {
