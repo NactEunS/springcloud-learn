@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by joe on 17-3-15.
  */
-@FeignClient("cloud-simple-service")
+@FeignClient(value = "cloud-simple-service",fallback = UserClientHystrix.class)
 public interface UserFeginService {
   @RequestMapping(value = "/user", method = RequestMethod.GET)
   List<User> readUserInfo();
